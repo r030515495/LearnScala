@@ -38,5 +38,15 @@ object String {
     println("milk, tea, muck" replaceAll("m[^ ]+k", "coffee"))
     //replaceFirst
     println("milk, tea, muck" replaceFirst("m[^ ]+k", "coffee"))
+
+    val input = "Enjoying this apple 3.14159 times today"
+    val pattern = """.* apple ([\d.]+) times .*""".r
+    println(s"input:${input}")
+    println(s"pattern:${pattern}")
+    val pattern(amountText) = input
+    println(s"amountText:${amountText}")
+    println(s"amountText:${amountText.toDouble}")
+
+
   }
 }
